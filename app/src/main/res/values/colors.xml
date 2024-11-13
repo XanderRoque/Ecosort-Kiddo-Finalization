@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="simplebackground">#52B788</color>
+    <color name="btn_color">#4F772D</color>
+    <color name="profile_backgroundcolor">#A67561</color>
+    <color name="transparent">#00000000</color>
+    <color name="Cardview">#b07d62</color>
+    <color name="btn_save">#8a5a44</color>
+    <color name="btn_color_red">#d90429</color>
+    <color name="darker_color">#FF000000</color>
+    <color name="loc2game">#84D1D1</color>
+    <color name="aboutUs">#EBBE95</color>
+
+<!--    settings color-->
+    <color name="insideBTN_settings">#C78D50</color>
+    <color name="strokeBTN_settings">#5F1B26</color>
+</resources>

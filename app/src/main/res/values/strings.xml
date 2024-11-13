@@ -1,0 +1,138 @@
+<resources>
+    <string name="app_name">Ecosort Kiddo</string>
+    <string name="logo_content_description">Logo of the application</string>
+    <string name="settings_button">settings_button</string>
+    <string name="imageView1">profile_colorbackground</string>
+    <string name="imageView2">profile_colorbackground</string>
+    <string name="exit_button">Exit</string>
+    <string name="back_button">Back</string>
+    <string name="description_background_image">Background image</string>
+
+<!--    Main Activity-->
+    <string name="button_location_text" translatable="true">Location</string>
+    <string name="button_profile_text" translatable="true">Profile</string>
+    <string name="button_resetData_text" translatable="true">Reset Data</string>
+
+    <string name="desLocation">Location</string>
+    <string name="desProfile">Profile</string>
+    <string name="desResetData">Reset Data</string>
+    
+<!--    Settings Activity-->
+
+    <string name="setting_text">Settings</string>
+    <string name="music_text">Music</string>
+    <string name="sound_text">Sound</string>
+    <string name="language_text">Language</string>
+
+<!--    Music And Sound -->
+    <string name="on_text">On</string>
+    <string name="off_text">Off</string>
+
+<!--    General Back-->
+    <string name="back_text">Back</string>
+
+<!--    Language-->
+    <string name="english_text">English</string>
+    <string name="filipino_text">Filipino</string>
+
+<!--    Profile-->
+    <string name="achievements_text">Achievements</string>
+    <string name="profile_text">Profile</string>
+    <string name="saveChanges_text">Save Changes?</string>
+    <string name="save_text">Save</string>
+    <string name="dontSave_text">Don\'t Save</string>
+
+    <!--    Location Activity-->
+    <string name="house_text">House</string>
+    <string name="backyard_text">Backyard</string>
+    <string name="forest_text">Forest</string>
+    <string name="beach_text">Beach</string>
+    <string name="selectLocation_text">Select A Location</string>
+
+<!--    General Location Select Level-->
+    <string name="selectLevel_text">Select A Level</string>
+
+<!--    General Play-->
+    <string name="play_text">Play</string>
+    
+<!--    General Retry-->
+    <string name="retry_text">Retry</string>
+
+<!--    General Next-->
+    <string name="next_text">Next</string>
+
+<!--    Generel Back Cardview-->
+    <string name="backCard_text">Would you like to return to the Levels?</string>"
+
+<!--    General Yes-->
+    <string name="yes_text">Yes</string>"
+
+<!--    General No-->
+    <string name="no_text">No</string>
+
+<!--    General Try Again-->
+    <string name="tryAgain_text">Try Again</string>
+
+<!--    General Time is Up-->
+    <string name="timeUp_text">Time is Up!</string>"
+
+<!--    General Question Sa Backyard Location-->
+    <string name="question_text">What type of waste is this?</string>
+
+<!--    Description of a garbage-->
+    <string name="paper_text">Crumpled Paper</string>
+    <string name="pizza_text">Pizza Box</string>
+    <string name="platicCup_text">Used Plastic Cup</string>
+    <string name="fruitFeels_text">Fruit Peels</string>
+    <string name="usedCan_text">Used Can</string>
+    <string name="paper2_text">Crumpled Paper</string>
+    <string name="chipsBag_text">Crumpled Chips Bag</string>
+    <string name="brokenCar_text">Broken Car</string>
+    <string name="paperRoll_text">Dirty Paper Roll</string>
+    <string name="bittenBurger_text">Bitten Burger</string>
+    <string name="bittenPizza_text">Bitten Pizza</string>
+    <string name="eggShell_text">Cracked Egg Shell</string>
+    <string name="treeBranch_text">Broken Tree Branch</string>
+    <string name="brokenClass_text">Broken Class</string>
+    <string name="lightBulb_text">Broken Light Bulb</string>
+    <string name="banana_text">Banana Peel</string>
+    <string name="usedCan2_text">Used Can</string>
+    <string name="ketchupBottle_text">Squeeze Ketchup Bottle</string>
+    <string name="bone_text">Bone</string>
+    <string name="garbageBag_text">Garbage Bag</string>
+    <string name="teaBag_text">Tea Bag</string>
+    <string name="rottenMeat_text">Rotten Meat</string>
+    <string name="moldyBread_text">Moldy Bread</string>
+    <string name="trashBag_text">Trash Bag</string>
+    <string name="candyWrapper_text">Candy Wrapper</string>
+
+<!--    Description in About Us-->
+    <string name="aboutUs_text">About Us</string>
+    <string name="ourTeam_text">Our Team</string>
+    <string name="reference_text">Reference</string>
+    <string name="termsCondition_text">Terms And Conditions</string>
+    <string name="backA_text">Back  >></string>
+
+<!--    Reference-->
+    <string name="designReference_text">Design Reference</string>
+    <string name="person_text">Person</string>
+    <string name="links_text">Links</string>
+    <string name="SnMreference_text">Sound and Music Reference</string>
+    
+<!--    Terms and Condition-->
+    <string name="effectiveDate_text">Effective Date: October 2024</string>
+    <string name="one_text">1. Use of the Application</string>
+    <string name="oneDescription_text">Ecosort Kiddo is a free educational game designed to teach children proper waste management through a drag-and-drop and clicking the appropriate trash bin mechanic. The app is for personal, non-commercial use only.</string>
+    <string name="two_text">2. Ads</string>
+    <string name="twoDescription_text">The game may feature advertisements. By using the app, you agree to view these ads as part of the experience. No purchases are required or available within the app.</string>
+    <string name="three_text">3. Children’s Privacy</string>
+    <string name="threeDescription_text">We prioritize the protection of children’s privacy. Ecosort Kiddo does not collect personal information from users. For more details, please refer to our Privacy Policy.</string>
+    <string name="four_text">4. Intellectual Property</string>
+    <string name="fourDescription_text">The content and designs within Ecosort Kiddo, including those generated by third-party tools, are protected by intellectual property laws. You may not reproduce, modify, or distribute any part of the app without permission.</string>
+    <string name="five_text">5. Third-Party Content</string>
+    <string name="fiveDescription_text">Some elements of the app, such as design assets, may be created using third-party tools. The use of these assets complies with their respective licenses.</string>
+    <string name="six_text">6. Updates and Changes</string>
+    <string name="sixDescription_text">We may update the app and its terms from time to time. Continued use of the app after updates signifies your acceptance of the modified terms.</string>
+    <string name="seven_text">7. Limitation of Liability</string>
+    <string name="sevenDescription_text">Ecosort Kiddo is provided `as is,`and we make no guarantees regarding its performance. We are not liable for any damages or issues arising from the use of the app.</string>
+</resources>

@@ -1,0 +1,116 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        tools:targetApi="31">
+
+        <!-- SplashActivity -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.EcosortKiddo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.EcosortKiddo" />
+
+            <!-- LocationsActivity -->
+        <activity
+            android:name=".LocationsActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.EcosortKiddo" />
+
+        <!-- ProfileActivity -->
+        <activity
+            android:name=".ProfileActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.EcosortKiddo" />
+
+        <!-- House_Location_Activity -->
+        <activity
+            android:name=".House_Location_Activity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.EcosortKiddo" />
+
+        <!-- House_Game_Activity -->
+        <activity
+            android:name=".House_Game_Activity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.EcosortKiddo" />
+
+        <!-- Backyard_Location_Activity -->
+        <activity
+            android:name=".Backyard_Location_Activity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.EcosortKiddo" />
+
+        <!-- Backyard_Game_Activity -->
+        <activity
+            android:name=".Backyard_Game_Activity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.EcosortKiddo" />
+
+        <!-- Forest_Location_Activity -->
+        <activity
+            android:name=".Forest_Location_Activity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.EcosortKiddo" />
+
+        <!-- Forest_Game_Activity -->
+        <activity
+            android:name=".Forest_Game_Activity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.EcosortKiddo" />
+
+        <!-- Beach_Location_Activity -->
+        <activity
+            android:name=".Beach_Location_Activity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.EcosortKiddo" />
+
+        <!-- Beach_Game_Activity -->
+        <activity
+            android:name=".Beach_Game_Activity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.EcosortKiddo" />
+
+    </application>
+</manifest>

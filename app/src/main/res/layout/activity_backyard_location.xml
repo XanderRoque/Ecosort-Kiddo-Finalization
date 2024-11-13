@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backyard_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blur_backyard_background"
+    tools:context=".LocationsActivity">
+
+    <TextView
+        android:id="@+id/txt_select_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="105dp"
+        android:fontFamily="@font/cubao_regular"
+        android:gravity="center_vertical"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="3"
+        android:text="@string/selectLevel_text"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.174" />
+
+    <ImageButton
+        android:id="@+id/exit_button_location2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="119dp"
+        android:background="@color/transparent"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/exit"
+        android:contentDescription="@string/exit_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <ImageButton
+        android:id="@+id/btn_play_loc2level1"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/transparent"
+        android:padding="2dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.345"
+        app:srcCompat="@drawable/number_one" />
+
+    <ImageButton
+        android:id="@+id/btn_play_loc2level2"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/transparent"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_play_loc2level3"
+        app:layout_constraintStart_toEndOf="@+id/btn_play_loc2level1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.706"
+        android:enabled="false"
+        app:srcCompat="@drawable/number_two" />
+
+    <ImageButton
+        android:id="@+id/btn_play_loc2level3"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/transparent"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.363"
+        android:enabled="false"
+        app:srcCompat="@drawable/number_three" />
+
+    <ImageButton
+        android:id="@+id/btn_play_loc2level4"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/transparent"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_play_loc2level6"
+        app:layout_constraintStart_toEndOf="@+id/btn_play_loc2level2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.706"
+        android:enabled="false"
+        app:srcCompat="@drawable/number_four" />
+
+    <ImageButton
+        android:id="@+id/btn_play_loc2level5"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="33dp"
+        android:background="@color/transparent"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.689"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415"
+        android:enabled="false"
+        app:srcCompat="@drawable/number_five" />
+
+    <ImageButton
+        android:id="@+id/btn_play_loc2level6"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/transparent"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.706"
+        android:enabled="false"
+        app:srcCompat="@drawable/number_six" />
+
+    <!--    Here the score-->
+    <TextView
+        android:id="@+id/backyard_score"
+        android:layout_width="120dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="105dp"
+        android:fontFamily="@font/cubao_regular"
+        android:gravity="center_vertical"
+        android:padding="2dp"
+        android:scaleType="center"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="3"
+        android:text="0/18"
+        android:textColor="@color/white"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.172" />
+
+    <ImageView
+        android:id="@+id/starts"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginStart="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/backyard_score"
+        app:layout_constraintHorizontal_bias="0.90"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/location2_star_rating_level1"
+        android:layout_width="95dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_play_loc2level1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/stars_zero" />
+
+    <ImageView
+        android:id="@+id/location2_star_rating_level2"
+        android:layout_width="95dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_play_loc2level2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/stars_zero" />
+
+    <ImageView
+        android:id="@+id/location2_star_rating_level3"
+        android:layout_width="95dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_play_loc2level3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/stars_zero" />
+
+    <ImageView
+        android:id="@+id/location2_star_rating_level4"
+        android:layout_width="95dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_play_loc2level4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/stars_zero" />
+
+    <ImageView
+        android:id="@+id/location2_star_rating_level5"
+        android:layout_width="95dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_play_loc2level5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.989"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/stars_zero" />
+
+    <ImageView
+        android:id="@+id/location2_star_rating_level6"
+        android:layout_width="95dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_play_loc2level6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/stars_zero" />
+
+    <!--    CardView PlayLevelOne-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_play__location2xxlevel1"
+        android:layout_width="350dp"
+        android:layout_height="320dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        app:cardCornerRadius="13dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/wood_one"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:scaleType="centerCrop">
+
+            <ImageView
+                android:id="@+id/save_message_levelone"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="-8dp"
+                android:layout_marginEnd="-5dp"
+                android:background="@drawable/level_one"
+                android:fontFamily="@font/cubao_regular"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_play_location2xxlevel1"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/cubao_regular"
+                android:scaleType="centerCrop"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="Play"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+
+            <Button
+                android:id="@+id/btn_back_loc2lvl1"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/cubao_regular"
+                android:scaleType="centerCrop"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="Back"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!--    CardView PlayLevelTwo-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_play__location2xxlevel2"
+        android:layout_width="350dp"
+        android:layout_height="320dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        app:cardCornerRadius="13dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/wood_one"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:scaleType="centerCrop">
+
+            <ImageView
+                android:id="@+id/save_message_two"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="-8dp"
+                android:layout_marginEnd="-5dp"
+                android:background="@drawable/level_two"
+                android:fontFamily="@font/cubao_regular"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_play_location2xxlevel2"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/cubao_regular"
+                android:scaleType="centerCrop"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="Play"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+
+            <Button
+                android:id="@+id/btn_back_loc2lvl2"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/cubao_regular"
+                android:scaleType="centerCrop"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="Back"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--    CardView PlayLevelThree-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_play__location2xxlevel3"
+        android:layout_width="350dp"
+        android:layout_height="320dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        app:cardCornerRadius="13dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/wood_one"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:scaleType="centerCrop">
+
+            <ImageView
+                android:id="@+id/save_message_levelthree"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="-8dp"
+                android:layout_marginEnd="-5dp"
+                android:background="@drawable/level_three"
+                android:fontFamily="@font/cubao_regular"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_play_location2xxlevel3"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/cubao_regular"
+                android:scaleType="centerCrop"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="Play"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+
+            <Button
+                android:id="@+id/btn_back_loc2lvl3"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/cubao_regular"
+                android:scaleType="centerCrop"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="Back"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--    CardView PlayLevelFour-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_play__location2xxlevel4"
+        android:layout_width="350dp"
+        android:layout_height="320dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        app:cardCornerRadius="13dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/wood_one"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:scaleType="centerCrop">
+
+            <ImageView
+                android:id="@+id/save_message_levelfour"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="-8dp"
+                android:layout_marginEnd="-5dp"
+                android:background="@drawable/level_four"
+                android:fontFamily="@font/cubao_regular"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_play_location2xxlevel4"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/cubao_regular"
+                android:scaleType="centerCrop"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="Play"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+
+            <Button
+                android:id="@+id/btn_back_loc2lvl4"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/cubao_regular"
+                android:scaleType="centerCrop"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="Back"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--    CardView PlayLevelFive-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_play__location2xxlevel5"
+        android:layout_width="350dp"
+        android:layout_height="320dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        app:cardCornerRadius="13dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/wood_one"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:scaleType="centerCrop">
+
+            <ImageView
+                android:id="@+id/save_message_levelfive"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="-8dp"
+                android:layout_marginEnd="-5dp"
+                android:background="@drawable/level_five"
+                android:fontFamily="@font/cubao_regular"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_play_location2xxlevel5"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/cubao_regular"
+                android:scaleType="centerCrop"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="Play"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+
+            <Button
+                android:id="@+id/btn_back_loc2vl5"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/cubao_regular"
+                android:scaleType="centerCrop"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="Back"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--    CardView PlayLevelSix-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_play__location2xxlevel6"
+        android:layout_width="350dp"
+        android:layout_height="320dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        app:cardCornerRadius="13dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/wood_one"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:scaleType="centerCrop">
+
+            <ImageView
+                android:id="@+id/save_message_levelsix"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="-8dp"
+                android:layout_marginEnd="-5dp"
+                android:background="@drawable/level_six"
+                android:fontFamily="@font/cubao_regular"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_play_location2xxlevel6"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/cubao_regular"
+                android:scaleType="centerCrop"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="Play"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+
+            <Button
+                android:id="@+id/btn_back_loc2lvl6"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/cubao_regular"
+                android:scaleType="centerCrop"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="Back"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--    CardView EndGameLevelOne-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_endgame_loc2lvl1"
+        android:layout_width="350dp"
+        android:layout_height="320dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:cardCornerRadius="13dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/wood_one"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:scaleType="centerCrop">
+
+            <ImageView
+                android:id="@+id/stars_got_loc2lvl1"
+                android:layout_width="190dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.141"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.262"
+                app:srcCompat="@drawable/stars_zero" />
+
+
+            <ImageView
+                android:id="@+id/victory_message"
+                android:layout_width="290dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="-5dp"
+                android:background="@drawable/completed"
+                android:scaleType="centerCrop"
+                android:fontFamily="@font/cubao_regular"
+                android:gravity="center"
+                android:elevation="8dp"
+                android:outlineProvider="background"
+                android:clipToOutline="true"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_try"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/cubao_regular"
+                android:scaleType="centerCrop"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="Retry"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/cubao_regular"
+                android:scaleType="centerCrop"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/click_blocker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <ImageButton
+        android:id="@+id/backyard_info_btn"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:background="@color/transparent"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.954"
+        app:layout_editor_absoluteX="62dp"
+        app:layout_editor_absoluteY="258dp"
+        app:srcCompat="@drawable/tutorial_info" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/backyard_tutorial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/backyard_tutorial1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/backyard_tutorial1" />
+
+            <TextView
+                android:id="@+id/backyard_next_tutorial"
+                android:layout_width="120dp"
+                android:layout_height="27dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="87dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/cubao_regular"
+                android:text="Next"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:gravity="right"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/backyard_Filipinotutorial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/backyard_Filipinotutorial1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/backyard_tutorial1" />
+
+            <TextView
+                android:id="@+id/backyard_next_filipino_tutorial"
+                android:layout_width="120dp"
+                android:layout_height="27dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="87dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/cubao_regular"
+                android:text="Next"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:gravity="right"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

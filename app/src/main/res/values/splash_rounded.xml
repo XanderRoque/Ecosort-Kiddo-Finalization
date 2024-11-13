@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="image_rounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="image_cornered">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">31%</item>
+    </style>
+
+    <style name="image_cornered_main">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12%</item>
+    </style>
+</resources>

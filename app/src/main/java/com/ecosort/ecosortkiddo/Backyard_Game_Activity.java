@@ -48,7 +48,7 @@ public class Backyard_Game_Activity extends AppCompatActivity {
 
     private static final int NUM_GARBAGE_IMAGE_VIEWS = 25;
     public int numberOfGarbageInLevel;
-    private static final long TIMER_DURATION = 180000; // 3 minutes in milliseconds
+    private static final long TIMER_DURATION = 18000; // 3 minutes in milliseconds
     private EditText timeEditText;
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis;
@@ -473,16 +473,52 @@ public class Backyard_Game_Activity extends AppCompatActivity {
         textNextFilipinoEarnReward.setText(TranslatorUtil.translate(textNextFilipinoEarnReward.getText().toString(), languageCode));
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        super.onBackPressed(); // Proceed with normal back action if CardView is not visible
-//        cardView.setVisibility(View.VISIBLE);
-//        //playButtonSound();
-//        toggleMusic(false);
-//        pauseTimer();
-//        setGarbageClickableDisable();// Hide the CardView if it's currently visible
-//    }
-//
+    //The buttons on the phone itself
+    @Override
+    public void onBackPressed() {
+        // Only show the cardView when the back button is pressed
+        if (cardView.getVisibility() != View.VISIBLE) {
+            cardView.setVisibility(View.VISIBLE);
+            toggleMusic(false);
+            pauseTimer();
+            setGarbageClickableDisable();
+        } else {
+            // Proceed with normal back action if the cardView is already visible
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        // Conditional check for cardView visibility
+        if (cardView.getVisibility() != View.VISIBLE) {
+            // Use post() to ensure the UI update happens on the main thread
+            cardView.post(() -> {
+                cardView.setVisibility(View.VISIBLE);
+                toggleMusic(false);
+                pauseTimer();
+                setGarbageClickableDisable();
+            });
+        }
+        super.onPause();
+        cardView.post(() -> cardView.setVisibility(View.GONE));
+    }
+
+    @Override
+    protected void onStop() {
+        if (cardView.getVisibility() != View.VISIBLE) {
+            // Use post() to ensure the UI update happens on the main thread
+            cardView.post(() -> {
+                cardView.setVisibility(View.VISIBLE);  // Make sure cardView becomes visible
+                toggleMusic(false);                    // Pause music
+                pauseTimer();                          // Pause the timer
+                setGarbageClickableDisable();
+            });
+        }
+        cardView.post(() -> cardView.setVisibility(View.VISIBLE));
+        super.onStop();
+    }
+
 //    @Override
 //    protected void onPause() {
 //        super.onPause();

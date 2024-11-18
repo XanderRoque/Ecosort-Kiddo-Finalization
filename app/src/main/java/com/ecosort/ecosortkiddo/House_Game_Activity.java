@@ -24,8 +24,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.graphics.Insets;
 
-import com.ecosort.ecosortkiddo.House_Location_Activity;
-import com.ecosort.ecosortkiddo.R;
 import com.ecosort.ecosortkiddo.dao.GarbageDao;
 import com.ecosort.ecosortkiddo.dao.ProfileDao;
 import com.ecosort.ecosortkiddo.dao.SettingsDao;
@@ -47,7 +45,7 @@ public class House_Game_Activity extends AppCompatActivity {
 
     private static final int NUM_GARBAGE_IMAGE_VIEWS = 25;
     public int numberOfGarbageInLevel;
-    private static final long TIMER_DURATION = 180000; //  180 000 = 3 minutes in milliseconds
+    private static final long TIMER_DURATION = 18000; //  180 000 = 3 minutes in milliseconds
     private ImageView trashBin;
     private ConstraintLayout container;
     private EditText timeEditText;
@@ -58,7 +56,6 @@ public class House_Game_Activity extends AppCompatActivity {
     private TextView textViewTimesOut;
     private ImageView victoryMessage;
     private ImageView failedMessage;
-    private Button nextButton;
     private StarRatingDao starRatingDao;
     private GarbageDao garbageDao;
     private ProfileDao profileDao;
@@ -214,8 +211,11 @@ private void initializeDependencies() {
         container = findViewById(R.id.activity_house_game);
         cardViewEndGame = findViewById(R.id.cardview_endgame);
         cardViewEndGame.setVisibility(View.GONE);
+
+        //Heto yung nakaka buset na cardview
         cardView = findViewById(R.id.cardView_ingame);
-        cardView.setVisibility(View.GONE);
+        cardView.post(() -> cardView.setVisibility(View.GONE));
+
         cardViewTimesOut = findViewById(R.id.cardview_times_out);
         textViewTimesOut = findViewById(R.id.textview_times_out);
         timeEditText = findViewById(R.id.time);
@@ -383,46 +383,52 @@ private void initializeDependencies() {
         textNextFilipinoEarnReward.setText(TranslatorUtil.translate(textNextFilipinoEarnReward.getText().toString(), languageCode));
     }
 
-   //Wshen you back in the phone i will display the cardview
-//    @Override
-//    public void onBackPressed() {
-//        // Only show the cardView when the back button is pressed
-//        if (cardView.getVisibility() != View.VISIBLE) {
-//            cardView.setVisibility(View.VISIBLE);
-//            toggleMusic(false);
-//            pauseTimer();
-//            setDragDisable();
-//        } else {
-//            // Proceed with normal back action if the cardView is already visible
-//            super.onBackPressed();
-//        }
-//    }
+   //When you back in the phone i will display the cardview
+   //The buttons on the phone itself
+    @Override
+    public void onBackPressed() {
+        // Only show the cardView when the back button is pressed
+        if (cardView.getVisibility() != View.VISIBLE) {
+            cardView.setVisibility(View.VISIBLE);
+            toggleMusic(false);
+            pauseTimer();
+            setDragDisable();
+        } else {
+            // Proceed with normal back action if the cardView is already visible
+            super.onBackPressed();
+        }
+    }
 
-//
-//    @Override
-//    protected void onPause() {
-//        handleCardViewVisibility();
-//        super.onPause();
-//        // Your other logic (e.g., saving game state) here
-//        Log.d("Debug", "App is paused - might have been sent to the background");
-//    }
-//
-//    @Override
-//    protected void onStop() {
-//        handleCardViewVisibility();
-//        super.onStop();
-//        // Your other logic here
-//        Log.d("Debug", "App is stopped - likely sent to the home screen");
-//    }
-//
-//    private void handleCardViewVisibility() {
-//        if (cardView.getVisibility() != View.VISIBLE) {
-//            cardView.setVisibility(View.VISIBLE);
-//        }
-//        toggleMusic(false);
-//        pauseTimer();
-//        setDragDisable();
-//    }
+    @Override
+    protected void onPause() {
+        // Conditional check for cardView visibility
+        if (cardView.getVisibility() != View.VISIBLE) {
+            // Use post() to ensure the UI update happens on the main thread
+            cardView.post(() -> {
+                cardView.setVisibility(View.VISIBLE);
+                toggleMusic(false);
+                pauseTimer();
+                setDragDisable();
+            });
+        }
+        super.onPause();
+        cardView.post(() -> cardView.setVisibility(View.GONE));
+    }
+
+    @Override
+    protected void onStop() {
+        if (cardView.getVisibility() != View.VISIBLE) {
+            // Use post() to ensure the UI update happens on the main thread
+            cardView.post(() -> {
+                cardView.setVisibility(View.VISIBLE);  // Make sure cardView becomes visible
+                toggleMusic(false);                    // Pause music
+                pauseTimer();                          // Pause the timer
+                setDragDisable();                      // Disable drag functionality
+            });
+        }
+        cardView.post(() -> cardView.setVisibility(View.VISIBLE));
+        super.onStop();
+    }
 
     private void setupTutorial() {
         tutorialCardview = findViewById(R.id.house_tutorial);
@@ -691,6 +697,7 @@ private void initializeDependencies() {
         if (starRating == 0) {
             if (victoryMessage != null) {
                 victoryMessage.setVisibility(View.GONE); // Ensure victoryMessage is hidden
+                //cardView.post(() -> cardView.setVisibility(View.GONE));
             }
             if (failedMessage != null) {
 //                failedMessage.setImageDrawable(null);
@@ -703,6 +710,7 @@ private void initializeDependencies() {
 //
 //                failedMessage.invalidate();
                 failedMessage.setVisibility(View.VISIBLE); // Show failedMessage
+                //cardView.post(() -> cardView.setVisibility(View.GONE));
             }
             Button nextButton = setupNextLevelButton(); // Assuming setupNextLevelButton returns the button
             if (nextButton != null) {

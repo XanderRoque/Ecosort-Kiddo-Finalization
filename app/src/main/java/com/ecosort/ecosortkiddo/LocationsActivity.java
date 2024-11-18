@@ -114,20 +114,7 @@ public class LocationsActivity extends AppCompatActivity {
             }
         });
 
-//        backyard_frame = findViewById(R.id.frame_backyard);
-//        backyard_frame.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                playButtonSound();
-//                Intent intent = new Intent(LocationsActivity.this, Backyard_Location_Activity.class);
-//                startActivity(intent);
-//            }
-//        });
-
-
         backyard_frame = findViewById(R.id.frame_backyard);
-        int starsCountInHomeLocation = starRatingDao.getTotalStarsByProfileIdAndLocationId(1, Location.HOME);
-        if(starsCountInHomeLocation == StarRating.TOTAL_STARS_HOME){
         backyard_frame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -136,53 +123,52 @@ public class LocationsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        }else {
-            backyard_frame.setAlpha(0.6f);
-            backyard_frame.setEnabled(false);
-        }
 
 
-//        forest_frame = findViewById(R.id.frame_forest);
-//        forest_frame.setOnClickListener(new View.OnClickListener() {
+//        backyard_frame = findViewById(R.id.frame_backyard);
+//        int starsCountInHomeLocation = starRatingDao.getTotalStarsByProfileIdAndLocationId(1, Location.HOME);
+//        if(starsCountInHomeLocation == StarRating.TOTAL_STARS_HOME){
+//        backyard_frame.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                playButtonSound();
-//                Intent intent = new Intent(LocationsActivity.this, Forest_Location_Activity.class);
+//                Intent intent = new Intent(LocationsActivity.this, Backyard_Location_Activity.class);
 //                startActivity(intent);
 //            }
 //        });
+//        }else {
+//            backyard_frame.setAlpha(0.6f);
+//            backyard_frame.setEnabled(false);
+//        }
+
 
         forest_frame = findViewById(R.id.frame_forest);
-        int starsCountInBackyardLocation = starRatingDao.getTotalStarsByProfileIdAndLocationId(1, Location.BACKYARD);
-        if(starsCountInBackyardLocation == StarRating.TOTAL_STARS_BACKYARD) {
-            forest_frame.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    playButtonSound();
-                    Intent intent = new Intent(LocationsActivity.this, Forest_Location_Activity.class);
-                    startActivity(intent);
-                }
-            });
-        }else{
-            forest_frame.setAlpha(0.6f);
-            forest_frame.setEnabled(false);
-        }
+        forest_frame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playButtonSound();
+                Intent intent = new Intent(LocationsActivity.this, Forest_Location_Activity.class);
+                startActivity(intent);
+            }
+        });
 
-//        beach_frame = findViewById(R.id.frame_beach);
-//        beach_frame.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                playButtonSound();
-//                Intent intent = new Intent(LocationsActivity.this, Beach_Location_Activity.class);
-//                startActivity(intent);
-//            }
-//        });
+//        forest_frame = findViewById(R.id.frame_forest);
+//        int starsCountInBackyardLocation = starRatingDao.getTotalStarsByProfileIdAndLocationId(1, Location.BACKYARD);
+//        if(starsCountInBackyardLocation == StarRating.TOTAL_STARS_BACKYARD) {
+//            forest_frame.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    playButtonSound();
+//                    Intent intent = new Intent(LocationsActivity.this, Forest_Location_Activity.class);
+//                    startActivity(intent);
+//                }
+//            });
+//        }else{
+//            forest_frame.setAlpha(0.6f);
+//            forest_frame.setEnabled(false);
+//        }
 
-
-        //Random games from beach
         beach_frame = findViewById(R.id.frame_beach);
-        int starsCountInForestLocation = starRatingDao.getTotalStarsByProfileIdAndLocationId(1, Location.FOREST);
-        if(starsCountInForestLocation == StarRating.TOTAL_STARS_FOREST) {
         beach_frame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -191,11 +177,25 @@ public class LocationsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        }else{
-        // Disable the beach frame
-        beach_frame.setEnabled(false);  // Disables interaction
-        beach_frame.setAlpha(0.6f);     // Optional: Dim the frame to indicate it's disabled
-    }
+
+
+        //Random games from beach
+//        beach_frame = findViewById(R.id.frame_beach);
+//        int starsCountInForestLocation = starRatingDao.getTotalStarsByProfileIdAndLocationId(1, Location.FOREST);
+//        if(starsCountInForestLocation == StarRating.TOTAL_STARS_FOREST) {
+//        beach_frame.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                playButtonSound();
+//                Intent intent = new Intent(LocationsActivity.this, Beach_Location_Activity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        }else{
+//        // Disable the beach frame
+//        beach_frame.setEnabled(false);  // Disables interaction
+//        beach_frame.setAlpha(0.6f);     // Optional: Dim the frame to indicate it's disabled
+//    }
 
         ImageButton exitButton = findViewById(R.id.exit_button_location1);
         if (exitButton != null) {

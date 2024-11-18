@@ -1,7 +1,6 @@
 package com.ecosort.ecosortkiddo;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -14,10 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
-import com.ecosort.ecosortkiddo.R;
-import com.ecosort.ecosortkiddo.dao.ProfileDao;
-import com.ecosort.ecosortkiddo.dao.SettingsDao;
 
 public class SplashActivity extends AppCompatActivity {
 

@@ -51,7 +51,7 @@ public class Beach_Game_Activity extends AppCompatActivity {
 
     private static final int NUM_GARBAGE_IMAGE_VIEWS = 25;
     public int numberOfGarbageInLevel;
-    private static final long TIMER_DURATION = 180000; // 3 minutes in milliseconds
+    private static final long TIMER_DURATION = 18000; // 3 minutes in milliseconds
     private ConstraintLayout container;
     private EditText timeEditText;
     private CountDownTimer countDownTimer;
@@ -975,6 +975,7 @@ public class Beach_Game_Activity extends AppCompatActivity {
             }
 
             public void onFinish() {
+                findViewById(R.id.click_blocker).setVisibility(View.VISIBLE);
                 timeLeftInMillis = 0;
                 timeEditText.setText("00:00");
                 showEndGameMessage(numberOfGarbageInLevel, selectedLevelInt);
@@ -1526,39 +1527,55 @@ public class Beach_Game_Activity extends AppCompatActivity {
         });
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        super.onBackPressed(); // Proceed with normal back action if CardView is not visible
-//        cardView.setVisibility(View.VISIBLE);
-//        toggleMusic(false);
-//        pauseTimer();
-//        setDragDisable();// Hide the CardView if it's currently visible
-//    }
-//
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        cardView.setVisibility(View.VISIBLE);
-//        toggleMusic(false);
-//        pauseTimer();
-//        setDragDisable();
-//
-//        // Your other logic (e.g., saving game state) here
-//        Log.d("Debug", "App is paused - might have been sent to the background");
-//    }
-//
-//    @Override
-//    protected void onStop() {
-//        super.onStop();
-//
-//        cardView.setVisibility(View.VISIBLE);
-//        toggleMusic(false);
-//        pauseTimer();
-//        setDragDisable();
-//
-//        // Your other logic here
-//        Log.d("Debug", "App is stopped - likely sent to the home screen");
-//    }
+    //The buttons on the phone itself
+    @Override
+    public void onBackPressed() {
+        // Only show the cardView when the back button is pressed
+        if (cardView.getVisibility() != View.VISIBLE) {
+            findViewById(R.id.click_blocker).setVisibility(View.VISIBLE);
+            cardView.setVisibility(View.VISIBLE);
+            toggleMusic(false);
+            pauseTimer();
+            setDragDisable();
+
+        } else {
+            // Proceed with normal back action if the cardView is already visible
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        // Conditional check for cardView visibility
+        if (cardView.getVisibility() != View.VISIBLE) {
+            // Use post() to ensure the UI update happens on the main thread
+            cardView.post(() -> {
+                findViewById(R.id.click_blocker).setVisibility(View.VISIBLE);
+                cardView.setVisibility(View.VISIBLE);
+                toggleMusic(false);
+                pauseTimer();
+                setDragDisable();
+            });
+        }
+        super.onPause();
+        cardView.post(() -> cardView.setVisibility(View.GONE));
+    }
+
+    @Override
+    protected void onStop() {
+        if (cardView.getVisibility() != View.VISIBLE) {
+            // Use post() to ensure the UI update happens on the main thread
+            cardView.post(() -> {
+                findViewById(R.id.click_blocker).setVisibility(View.VISIBLE);
+                cardView.setVisibility(View.VISIBLE);  // Make sure cardView becomes visible
+                toggleMusic(false);                    // Pause music
+                pauseTimer();                          // Pause the timer
+                setDragDisable();                      // Disable drag functionality
+            });
+        }
+        cardView.post(() -> cardView.setVisibility(View.VISIBLE));
+        super.onStop();
+    }
 
     public void applauseSound() {
         if (isApplauseSoundOn && applause_CompletedStar != null) {

@@ -45,7 +45,7 @@ public class House_Game_Activity extends AppCompatActivity {
 
     private static final int NUM_GARBAGE_IMAGE_VIEWS = 25;
     public int numberOfGarbageInLevel;
-    private static final long TIMER_DURATION = 18000; //  180 000 = 3 minutes in milliseconds
+    private static final long TIMER_DURATION = 180000; //  180 000 = 3 minutes in milliseconds
     private ImageView trashBin;
     private ConstraintLayout container;
     private EditText timeEditText;

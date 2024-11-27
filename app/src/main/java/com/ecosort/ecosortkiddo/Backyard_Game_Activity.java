@@ -48,7 +48,7 @@ public class Backyard_Game_Activity extends AppCompatActivity {
 
     private static final int NUM_GARBAGE_IMAGE_VIEWS = 25;
     public int numberOfGarbageInLevel;
-    private static final long TIMER_DURATION = 18000; // 3 minutes in milliseconds
+    private static final long TIMER_DURATION = 180000; // 3 minutes in milliseconds
     private EditText timeEditText;
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis;
@@ -609,6 +609,7 @@ public class Backyard_Game_Activity extends AppCompatActivity {
 
         applauseSound();
 
+        cardViewEndGame.post(() -> cardViewEndGame.setVisibility(View.GONE));
         rewardCardview.setVisibility(View.VISIBLE);
         //rewardImageView.setImageResource(rewardImages[currentRewardIndex]);
 
@@ -633,6 +634,7 @@ public class Backyard_Game_Activity extends AppCompatActivity {
 
         applauseSound();
 
+        cardViewEndGame.post(() -> cardViewEndGame.setVisibility(View.GONE));
         rewardFilipinoCardview.setVisibility(View.VISIBLE);
         //rewardImageView.setImageResource(rewardImages[currentRewardIndex]);
 
@@ -887,7 +889,6 @@ public class Backyard_Game_Activity extends AppCompatActivity {
         pauseTimer();
         setGarbageClickableDisable();
         disableBackButton();
-
         toggleMusic(false);
 
         //findViewById(R.id.click_blocker).setVisibility(View.VISIBLE);
@@ -956,7 +957,7 @@ public class Backyard_Game_Activity extends AppCompatActivity {
 //            x.start();
 //            x.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 //                @Override
-//                public void onCompletion(MediaPlayer mp) {
+//                public void onCompletion(MediaPlayer mp) {s
 //                    mp.release();
 //                }
 //            });
@@ -1014,12 +1015,14 @@ public class Backyard_Game_Activity extends AppCompatActivity {
                     //show na may na achieve sya
 
                     if (Settings.LANGUAGE_ENGLISH.equalsIgnoreCase(settings.getLanguage())){
+                        cardViewEndGame.post(() -> cardViewEndGame.setVisibility(View.GONE));
                         earnRewardCardView();
                     } else {
+                        cardViewEndGame.post(() -> cardViewEndGame.setVisibility(View.GONE));
                         earnFilipinoRewardCardView();
                     }
                 }else{
-                    cardViewEndGame.setVisibility(View.VISIBLE);
+                    //cardViewEndGame.setVisibility(View.VISIBLE);
                 }
             }else {
                 cardViewTimesOut.setVisibility(View.VISIBLE);
@@ -1038,12 +1041,14 @@ public class Backyard_Game_Activity extends AppCompatActivity {
                     //show na may na achieve sya
 
                     if (Settings.LANGUAGE_ENGLISH.equalsIgnoreCase(settings.getLanguage())){
+                        cardViewEndGame.post(() -> cardViewEndGame.setVisibility(View.GONE));
                         earnRewardCardView();
                     } else {
+                        cardViewEndGame.post(() -> cardViewEndGame.setVisibility(View.GONE));
                         earnFilipinoRewardCardView();
                     }
                 }else{
-                    cardViewEndGame.setVisibility(View.VISIBLE);
+                    //cardViewEndGame.setVisibility(View.VISIBLE);
                 }
             }else {
                 new Handler().postDelayed(() -> cardViewEndGame.setVisibility(View.VISIBLE), 500);

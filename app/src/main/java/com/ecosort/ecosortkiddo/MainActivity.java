@@ -113,8 +113,6 @@ public class MainActivity extends AppCompatActivity {
 
         //String languageFromDB = settings.getLanguage();
         //LocaleHelper.setLocale(MainActivity.this, languageFromDB);  // Change to English
-
-
         toggleSound(settings.getSound() == 1 ? true : false);
         toggleMusic(settings.getMusic() == 1 ? true : false);
 
@@ -140,8 +138,6 @@ public class MainActivity extends AppCompatActivity {
 
         //convert to chosen language
         translateText(settings.getLanguage());
-
-
     }
 
     private void translateText(String languageCode){
@@ -572,7 +568,7 @@ private void setMusicButton() {
     }
 
     private void setupInformationAboutUs(){
-        View blocker = findViewById(R.id.click_blocker);
+        //View blocker = findViewById(R.id.click_blocker);
 
 
         ImageView aboutUs_imageView = findViewById(R.id.aboutUs);
@@ -593,7 +589,14 @@ private void setMusicButton() {
         if (aboutUs_imageView != null) {
             aboutUs_imageView.setOnClickListener(view -> {
                 playButtonSound();
-                blocker.setVisibility(View.VISIBLE);
+//                findViewById(R.id.click_blocker).setVisibility(View.VISIBLE);
+                //blocker.setVisibility(View.VISIBLE);
+                button_music.setEnabled(false);
+                button_sound.setEnabled(false);
+                button_language.setEnabled(false);
+                aboutUs_imageView.setEnabled(false);
+                exitButton.setEnabled(false);
+
                 aboutUs_cardView.setVisibility(View.VISIBLE);
 
                 aboutUs_cardView.setClickable(false);
@@ -604,7 +607,7 @@ private void setMusicButton() {
         if (ourTeam_button != null) {
             ourTeam_button.setOnClickListener(view -> {
                 playButtonSound();
-                blocker.setVisibility(View.VISIBLE);
+                //blocker.setVisibility(View.VISIBLE);
                 cardView_ourTeam.setVisibility(View.VISIBLE);
                 cardView_reference.setVisibility(View.GONE);
                 cardView_terms.setVisibility(View.GONE);
@@ -623,7 +626,7 @@ private void setMusicButton() {
         if (reference_button != null) {
             reference_button.setOnClickListener(view -> {
                 playButtonSound();
-                blocker.setVisibility(View.VISIBLE);
+                //blocker.setVisibility(View.VISIBLE);
                 cardView_reference.setVisibility(View.VISIBLE);
                 cardView_ourTeam.setVisibility(View.GONE);
                 cardView_terms.setVisibility(View.GONE);
@@ -642,7 +645,7 @@ private void setMusicButton() {
         if (terms_button != null) {
             terms_button.setOnClickListener(view -> {
                 playButtonSound();
-                blocker.setVisibility(View.VISIBLE);
+                //blocker.setVisibility(View.VISIBLE);
                 cardView_terms.setVisibility(View.VISIBLE);
                 cardView_reference.setVisibility(View.GONE);
                 cardView_ourTeam.setVisibility(View.GONE);
@@ -661,8 +664,15 @@ private void setMusicButton() {
         if (txt_backAboutUs != null) {
             txt_backAboutUs.setOnClickListener(view -> {
                 playButtonSound();
-                blocker.setVisibility(View.GONE);
+                //blocker.setVisibility(View.GONE);
+                findViewById(R.id.click_blocker).setVisibility(View.GONE);
                 aboutUs_cardView.setVisibility(View.GONE);
+
+                button_music.setEnabled(true);
+                button_sound.setEnabled(true);
+                button_language.setEnabled(true);
+                aboutUs_imageView.setEnabled(true);
+                exitButton.setEnabled(true);
 
                 aboutUs_cardView.setClickable(true);
             });

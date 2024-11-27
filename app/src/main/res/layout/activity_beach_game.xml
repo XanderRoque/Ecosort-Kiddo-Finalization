@@ -961,7 +961,7 @@
 
             <TextView
                 android:id="@+id/next_storyBeach"
-                android:layout_width="120dp"
+                android:layout_width="130dp"
                 android:layout_height="27dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
@@ -1004,7 +1004,7 @@
 
             <TextView
                 android:id="@+id/next_FilipinostoryBeach"
-                android:layout_width="120dp"
+                android:layout_width="130dp"
                 android:layout_height="27dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
@@ -1046,16 +1046,17 @@
 
             <TextView
                 android:id="@+id/next_earnRewardBeach"
-                android:layout_width="120dp"
-                android:layout_height="27dp"
+                android:layout_width="130dp"
+                android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="50dp"
-                android:layout_marginBottom="330dp"
+                android:layout_marginEnd="87dp"
+                android:layout_marginBottom="83dp"
                 android:fontFamily="@font/cubao_regular"
                 android:text="@string/next_text"
                 android:textColor="@android:color/white"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:gravity="right"/>
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -1088,16 +1089,17 @@
 
             <TextView
                 android:id="@+id/nextFilipino_earnRewardBeach"
-                android:layout_width="120dp"
-                android:layout_height="27dp"
+                android:layout_width="130dp"
+                android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="50dp"
-                android:layout_marginBottom="330dp"
+                android:layout_marginEnd="87dp"
+                android:layout_marginBottom="83dp"
                 android:fontFamily="@font/cubao_regular"
                 android:text="@string/next_text"
                 android:textColor="@android:color/white"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:gravity="right"/>
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

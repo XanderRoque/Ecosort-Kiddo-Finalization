@@ -28,7 +28,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022"
         app:srcCompat="@drawable/trash1" />
@@ -716,7 +716,7 @@
             <!-- Question Container -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/questionCard"
-                android:layout_width="240dp"
+                android:layout_width="320dp"
                 android:layout_height="180dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
@@ -733,19 +733,19 @@
                         android:id="@+id/questionText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="-2dp"
+                        android:layout_marginTop="6dp"
                         android:fontFamily="@font/montserratmeduim"
                         android:gravity="center"
                         android:text="@string/question_text"
                         android:textColor="@android:color/white"
-                        android:textSize="23sp" />
+                        android:textSize="24sp" />
 
                     <ImageView
                         android:id="@+id/questionImage"
-                        android:layout_width="85dp"
-                        android:layout_height="85dp"
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
                         android:layout_marginTop="0dp"
-                        android:scaleType="centerInside"
+                        android:scaleType="fitCenter"
                         android:background="@android:color/transparent"
                         android:src="@drawable/trash16" />
 
@@ -753,12 +753,12 @@
                         android:id="@+id/imageText"
                         android:layout_width="235dp"
                         android:layout_height="40dp"
-                        android:layout_marginTop="-5dp"
+                        android:layout_marginTop="-3dp"
                         android:fontFamily="@font/montserratmeduim"
                         android:gravity="center"
                         android:text="Banana peel"
                         android:textColor="@android:color/white"
-                        android:textSize="20sp" />
+                        android:textSize="22sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -894,7 +894,7 @@
 
             <TextView
                 android:id="@+id/backyard_next_tutorial"
-                android:layout_width="120dp"
+                android:layout_width="130dp"
                 android:layout_height="27dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
@@ -933,11 +933,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
-                android:src="@drawable/house_filipino_tutorial1" />
+                android:src="@drawable/backyard_filipino_tutorial1" />
 
             <TextView
                 android:id="@+id/next_Filipinotutorialbackyard"
-                android:layout_width="120dp"
+                android:layout_width="130dp"
                 android:layout_height="27dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
@@ -979,16 +979,17 @@
 
             <TextView
                 android:id="@+id/next_earnRewardBackyard"
-                android:layout_width="120dp"
-                android:layout_height="27dp"
+                android:layout_width="130dp"
+                android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="50dp"
-                android:layout_marginBottom="330dp"
+                android:layout_marginEnd="87dp"
+                android:layout_marginBottom="83dp"
                 android:fontFamily="@font/cubao_regular"
                 android:text="@string/next_text"
                 android:textColor="@android:color/white"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:gravity="right"/>
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -1021,16 +1022,17 @@
 
             <TextView
                 android:id="@+id/nextFilipino_earnRewardBackyard"
-                android:layout_width="120dp"
-                android:layout_height="27dp"
+                android:layout_width="130dp"
+                android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="50dp"
-                android:layout_marginBottom="330dp"
+                android:layout_marginEnd="87dp"
+                android:layout_marginBottom="83dp"
                 android:fontFamily="@font/cubao_regular"
                 android:text="@string/next_text"
                 android:textColor="@android:color/white"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:gravity="right"/>
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

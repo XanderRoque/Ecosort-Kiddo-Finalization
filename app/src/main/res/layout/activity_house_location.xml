@@ -216,7 +216,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:srcCompat="@drawable/stars_zero" />
 
     <ImageView
@@ -321,7 +321,7 @@
                 android:id="@+id/save_message_levelone"
                 android:layout_width="300dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="-8dp"
+                android:layout_marginTop="-5dp"
                 android:layout_marginEnd="-5dp"
                 android:background="@drawable/level_one"
                 android:fontFamily="@font/cubao_regular"
@@ -332,11 +332,25 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
+            <ImageView
+                android:id="@+id/location1_starRating_level1"
+                android:layout_width="175dp"
+                android:layout_height="75dp"
+                android:gravity="center"
+                app:layout_constraintHorizontal_bias="0.157"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/stars_zero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="invisible"/>
+
             <Button
                 android:id="@+id/btn_play_location1xxlevel1"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/btn_rounded"
                 android:fontFamily="@font/cubao_regular"
                 android:scaleType="centerCrop"
@@ -405,7 +419,7 @@
             android:id="@+id/save_message_two"
             android:layout_width="300dp"
             android:layout_height="70dp"
-            android:layout_marginTop="-8dp"
+            android:layout_marginTop="-5dp"
             android:layout_marginEnd="-5dp"
             android:background="@drawable/level_two"
             android:fontFamily="@font/cubao_regular"
@@ -416,11 +430,25 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />
 
+            <ImageView
+                android:id="@+id/location1_starRating_level2"
+                android:layout_width="175dp"
+                android:layout_height="75dp"
+                android:gravity="center"
+                app:layout_constraintHorizontal_bias="0.157"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/stars_zero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="invisible"/>
+
             <Button
             android:id="@+id/btn_play_location1xxlevel2"
             android:layout_width="180dp"
             android:layout_height="50dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/btn_rounded"
             android:fontFamily="@font/cubao_regular"
             android:scaleType="centerCrop"
@@ -488,7 +516,7 @@
                 android:id="@+id/save_message_levelthree"
                 android:layout_width="300dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="-8dp"
+                android:layout_marginTop="-5dp"
                 android:layout_marginEnd="-5dp"
                 android:background="@drawable/level_three"
                 android:fontFamily="@font/cubao_regular"
@@ -499,11 +527,25 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
+            <ImageView
+                android:id="@+id/location1_starRating_level3"
+                android:layout_width="175dp"
+                android:layout_height="75dp"
+                android:gravity="center"
+                app:layout_constraintHorizontal_bias="0.157"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/stars_zero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="invisible"/>
+
             <Button
                 android:id="@+id/btn_play_location1xxlevel3"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/btn_rounded"
                 android:fontFamily="@font/cubao_regular"
                 android:scaleType="centerCrop"
@@ -571,7 +613,7 @@
                 android:id="@+id/save_message_levelfour"
                 android:layout_width="300dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="-8dp"
+                android:layout_marginTop="-5dp"
                 android:layout_marginEnd="-5dp"
                 android:background="@drawable/level_four"
                 android:fontFamily="@font/cubao_regular"
@@ -582,11 +624,25 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
+            <ImageView
+                android:id="@+id/location1_starRating_level4"
+                android:layout_width="175dp"
+                android:layout_height="75dp"
+                android:gravity="center"
+                app:layout_constraintHorizontal_bias="0.157"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/stars_zero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="invisible"/>
+
             <Button
                 android:id="@+id/btn_play_location1xxlevel4"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/btn_rounded"
                 android:fontFamily="@font/cubao_regular"
                 android:scaleType="centerCrop"
@@ -654,7 +710,7 @@
                 android:id="@+id/save_message_levelfive"
                 android:layout_width="300dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="-8dp"
+                android:layout_marginTop="-5dp"
                 android:layout_marginEnd="-5dp"
                 android:background="@drawable/level_five"
                 android:fontFamily="@font/cubao_regular"
@@ -665,11 +721,25 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
+            <ImageView
+                android:id="@+id/location1_starRating_level5"
+                android:layout_width="175dp"
+                android:layout_height="75dp"
+                android:gravity="center"
+                app:layout_constraintHorizontal_bias="0.157"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/stars_zero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="invisible"/>
+
             <Button
                 android:id="@+id/btn_play_location1xxlevel5"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/btn_rounded"
                 android:fontFamily="@font/cubao_regular"
                 android:scaleType="centerCrop"
@@ -737,7 +807,7 @@
                 android:id="@+id/save_message_levelsix"
                 android:layout_width="300dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="-8dp"
+                android:layout_marginTop="-5dp"
                 android:layout_marginEnd="-5dp"
                 android:background="@drawable/level_six"
                 android:fontFamily="@font/cubao_regular"
@@ -748,11 +818,25 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
+            <ImageView
+                android:id="@+id/location1_starRating_level6"
+                android:layout_width="175dp"
+                android:layout_height="75dp"
+                android:gravity="center"
+                app:layout_constraintHorizontal_bias="0.157"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/stars_zero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="invisible"/>
+
             <Button
                 android:id="@+id/btn_play_location1xxlevel6"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/btn_rounded"
                 android:fontFamily="@font/cubao_regular"
                 android:scaleType="centerCrop"
@@ -959,7 +1043,7 @@
 
             <TextView
                 android:id="@+id/house_next_tutorial"
-                android:layout_width="120dp"
+                android:layout_width="130dp"
                 android:layout_height="27dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
@@ -1009,7 +1093,7 @@
 
             <TextView
                 android:id="@+id/house_next_filipino_tutorial"
-                android:layout_width="120dp"
+                android:layout_width="130dp"
                 android:layout_height="27dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"

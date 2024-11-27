@@ -248,6 +248,35 @@ public class Forest_Location_Activity extends AppCompatActivity {
             }
         }
 
+
+        for (StarRating sr : starRatingList) {
+
+            int starsOnLevel = sr.getStars();
+
+            totalStarsInCurrentLocation = totalStarsInCurrentLocation + starsOnLevel;
+            System.out.println(sr.getLevelId() + " " + sr.getStars());
+
+            // Updated: Changed to use starRatingLevelingMapping
+            Integer starRatingPerLevel = starRatingLevelingMapping.get(sr.getLevelId());
+            if (starRatingPerLevel != null) {
+                ImageView iv = findViewById(starRatingPerLevel);
+                iv.setVisibility(View.VISIBLE);
+
+                int drawableResId = House_Game_Activity.getStarDrawable(starsOnLevel);
+                Log.d("EndGame", "Drawable resource ID: " + drawableResId);
+                iv.setImageResource(drawableResId);
+            }
+
+            if (starsOnLevel > 0 && sr.getLevelId() < 6) {
+                Integer nextLevelId = imageButtonMapping.get(sr.getLevelId() + 1);
+                if (nextLevelId != null) {
+                    ImageButton ib = findViewById(nextLevelId);
+                    setButtonState(nextLevelId, true);
+                }
+            }
+        }
+
+
         TextView totalStarsTextView = findViewById(R.id.forest_score);
         totalStarsTextView.setText(String.valueOf(totalStarsInCurrentLocation) + " / " + StarRating.TOTAL_STARS_FOREST);
 
@@ -441,6 +470,16 @@ public class Forest_Location_Activity extends AppCompatActivity {
         imageButtonMapping.put(4, Integer.valueOf(R.id.btn_play_loc3level4));
         imageButtonMapping.put(5, Integer.valueOf(R.id.btn_play_loc3level5));
         imageButtonMapping.put(6, Integer.valueOf(R.id.btn_play_loc3level6));
+    }
+
+    static Map<Integer, Integer> starRatingLevelingMapping = new HashMap<>();
+    static {
+        starRatingLevelingMapping.put(1, Integer.valueOf(R.id.location3_starRating_level1));
+        starRatingLevelingMapping.put(2, Integer.valueOf(R.id.location3_starRating_level2));
+        starRatingLevelingMapping.put(3, Integer.valueOf(R.id.location3_starRating_level3));
+        starRatingLevelingMapping.put(4, Integer.valueOf(R.id.location3_starRating_level4));
+        starRatingLevelingMapping.put(5, Integer.valueOf(R.id.location3_starRating_level5));
+        starRatingLevelingMapping.put(6, Integer.valueOf(R.id.location3_starRating_level6));
     }
 
     private void setupPlayButton(int buttonId, Class<?> activityClass) {

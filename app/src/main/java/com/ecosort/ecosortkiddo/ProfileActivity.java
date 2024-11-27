@@ -104,6 +104,7 @@ public class ProfileActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     playButtonSound();
                     if (hasChanges()) {
+                        findViewById(R.id.click_blocker).setVisibility(View.VISIBLE);
                         cardView.setVisibility(View.VISIBLE);
                     } else {
                         finish();
@@ -122,6 +123,7 @@ public class ProfileActivity extends AppCompatActivity {
                     myProfile.setAvatarId(selectedAvatarId); // Update the profile with the selected avatar ID
                     profileDao.updateProfile(myProfile);
 
+                    findViewById(R.id.click_blocker).setVisibility(View.GONE);
                     finish();
                 }
             });
@@ -133,19 +135,27 @@ public class ProfileActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     playButtonSound();
-                    // Do not save any changes
-                    // Reset the avatar and username to their initial values
+
+                    // Reset the profile data to initial values
                     myProfile.setName(initialUsername);
                     myProfile.setAvatarId(initialAvatarId);
 
-
-                    Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
+                    // Update the UI with the reset avatar
                     setAvatar(initialAvatarId);
+
+                    // Navigate back to the MainActivity
+                    Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
                     startActivity(intent);
-                    finish(); // Optionally finish the current activity to remove it from the back stack
+
+                    // Hide the click blocker
+                    findViewById(R.id.click_blocker).setVisibility(View.GONE);
+
+                    // Finish the current activity to clear it from the back stack
+                    finish();
                 }
             });
         }
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -180,6 +190,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         if (hasChanges()) {
             // Show the CardView if any change is detected
+            findViewById(R.id.click_blocker).setVisibility(View.VISIBLE);
             cardView.setVisibility(View.VISIBLE);
         } else {
             // If no change, navigate to MainActivity
@@ -195,6 +206,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onPause();
         if (hasChanges()) {
             // Show the CardView if any change is detected
+            findViewById(R.id.click_blocker).setVisibility(View.VISIBLE);
             cardView.setVisibility(View.VISIBLE);
         } else {
             // If no change, navigate to MainActivity
@@ -209,6 +221,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onStop();
         if (hasChanges()) {
             // Show the CardView if any change is detected
+            findViewById(R.id.click_blocker).setVisibility(View.VISIBLE);
             cardView.setVisibility(View.VISIBLE);
         } else {
             // If no change, navigate to MainActivity
